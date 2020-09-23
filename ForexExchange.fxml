@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="cadexchange.ForexExchangeController">
+<fx:define>
+    
+    <Insets fx:id="nodeMargins" bottom="10.0" left="10.0" right ="10.0" top="10.0"/>
+</fx:define>
+ <fx:define>
+        <ToggleGroup fx:id="groupCurrency" />
+ </fx:define>
+<top>
+<GridPane vgap="5" hgap="5" BorderPane.margin="$nodeMargins">
+<columnConstraints>
+<ColumnConstraints percentWidth="33.0" />
+<ColumnConstraints percentWidth="34.0" />
+<ColumnConstraints percentWidth="33.0" />
+</columnConstraints>
+<children>
+
+    <ImageView fx:id="imgPicture1" fitWidth="150" fitHeight="150" GridPane.rowIndex="0" GridPane.columnIndex="1">
+        <image>
+              <Image url="images/can.jpg" />
+        </image>
+     </ImageView>
+ 
+     <TextField fx:id="t1"  GridPane.rowIndex="1" GridPane.columnIndex="0" BorderPane.margin="$nodeMargins"/> 
+     <Label fx:id="lblEqual" GridPane.rowIndex="1" GridPane.columnIndex="1" BorderPane.margin="$nodeMargins" /> 
+     <TextField fx:id="t2" GridPane.rowIndex="1" GridPane.columnIndex="2" BorderPane.margin="$nodeMargins"/> 
+     <RadioButton text="_$ USD" mnemonicParsing="true" toggleGroup="$groupCurrency"
+            GridPane.rowIndex="2" BorderPane.margin="$nodeMargins" />
+        <RadioButton text="_£ POUND" mnemonicParsing="true" toggleGroup="$groupCurrency"
+            GridPane.rowIndex="3" BorderPane.margin="$nodeMargins" />
+        <RadioButton text="_€ EURO" mnemonicParsing="true" toggleGroup="$groupCurrency"
+            GridPane.rowIndex="4" BorderPane.margin="$nodeMargins" />  
+        <RadioButton text="_₱ PESO" mnemonicParsing="true" toggleGroup="$groupCurrency"
+           GridPane.rowIndex="5" BorderPane.margin="$nodeMargins" /> 
+        <RadioButton text="_¥ YUAN" mnemonicParsing="true" toggleGroup="$groupCurrency"
+           GridPane.rowIndex="6" BorderPane.margin="$nodeMargins" />
+        <RadioButton text="_₹ RUPEES" mnemonicParsing="true" toggleGroup="$groupCurrency"
+           GridPane.rowIndex="7" BorderPane.margin="$nodeMargins" />
+      <Button GridPane.rowIndex="8" GridPane.columnIndex="1" BorderPane.margin="$nodeMargins" 
+              text="Convert"  onAction="#calcConvert" mnemonicParsing="true" /> 
+     
+       <Label fx:id="lblInfo" GridPane.rowIndex="5" GridPane.columnIndex="2" BorderPane.margin="$nodeMargins" />
+     
+</children>
+
+</GridPane>
+</top>
+</BorderPane>

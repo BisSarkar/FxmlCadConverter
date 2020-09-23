@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="650.0" 
+            styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="cadexchange.CurrencyConverterController">
+   
+    <stylesheets>
+        <URL value="@currencyconverter.css"/>
+    </stylesheets>
+   
+ <fx:define>
+        <ToggleGroup fx:id="groupCurrency" />
+    </fx:define>
+    <children>
+    <ImageView fx:id="imgPicture" fitWidth="170" fitHeight="170" layoutX="100"
+                layoutY="140">
+        <image>
+               <Image url="images/can.jpg" />
+        </image>
+    </ImageView>
+
+    <ImageView fx:id="imgPicture1" fitWidth="100" fitHeight="80" layoutX="10"
+                layoutY="10">
+        <image>
+              <Image url="images/usa.jpg" />
+        </image>
+    </ImageView>
+     
+     <ImageView fx:id="imgPicture2" fitWidth="100" fitHeight="80" layoutX="120"
+                layoutY="10">
+        <image>
+              <Image url="images/uk.png" />
+        </image>
+    </ImageView>
+    
+    <ImageView fx:id="imgPicture3" fitWidth="100" fitHeight="80" layoutX="230"
+                layoutY="10">
+        <image>
+              <Image url="images/eur.jpg" />
+        </image>
+    </ImageView>
+    
+    <ImageView fx:id="imgPicture4" fitWidth="100" fitHeight="80" layoutX="335"
+                layoutY="10">
+        <image>
+              <Image url="images/mex.png" />
+        </image>
+    </ImageView>
+    
+    <ImageView fx:id="imgPicture5" fitWidth="100" fitHeight="80" layoutX="440"
+                layoutY="10">
+        <image>
+              <Image url="images/chn.jpg" />
+        </image>
+    </ImageView>
+    
+    <ImageView fx:id="imgPicture6" fitWidth="100" fitHeight="80" layoutX="545"
+                layoutY="10">
+        <image>
+              <Image url="images/ind.jpg" />
+        </image>
+    </ImageView>
+     
+         
+        <TextField fx:id="t1"  layoutX="100" layoutY="100"/> 
+        <Label fx:id="lblEqual" layoutX="325" layoutY="109" /> 
+        <TextField fx:id="t2"  layoutX="365" layoutY="100"/> 
+        <Label fx:id="lblInfo" layoutX="420" layoutY="200" />
+         
+        <RadioButton text="_$ USD" mnemonicParsing="true" toggleGroup="$groupCurrency"
+            layoutX="280" layoutY="140" />
+        <RadioButton text="_£ POUND" mnemonicParsing="true" toggleGroup="$groupCurrency"
+            layoutX="280" layoutY="170" />
+        <RadioButton text="_€ EURO" mnemonicParsing="true" toggleGroup="$groupCurrency"
+            layoutX="280" layoutY="200" />  
+        <RadioButton text="_₱ PESO" mnemonicParsing="true" toggleGroup="$groupCurrency"
+            layoutX="280" layoutY="230" /> 
+        <RadioButton text="_¥ YUAN" mnemonicParsing="true" toggleGroup="$groupCurrency"
+            layoutX="280" layoutY="260" />
+        <RadioButton text="_₹ RUPEES" mnemonicParsing="true" toggleGroup="$groupCurrency"
+            layoutX="280" layoutY="290" />
+         <Button layoutX="280" layoutY="330" text="Convert"  onAction="#calcConvert" mnemonicParsing="true" /> 
+           
+    </children>
+
+
+</AnchorPane>

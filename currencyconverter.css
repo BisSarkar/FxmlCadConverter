@@ -1,0 +1,31 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.root {
+  -fx-font: 12pt sans-serif;
+  -fx-background-color: lightpink;
+  -fx-text-fill: navy;
+}
+
+.label {
+  -fx-font-weight: bold;
+  -fx-text-fill: navy;
+}
+
+.button {
+  -fx-font-weight: bold;
+  -fx-text-fill: red;
+  -fx-border-width: 3px;
+  -fx-border-color: magenta;
+  -fx-padding: 7px;
+  -fx-background-color: yellow;
+}
+
+.TextField t2 {
+  -fx-font-weight: bold;
+  -fx-background-color: palegreen;
+}
